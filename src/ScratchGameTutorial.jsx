@@ -2,49 +2,53 @@ import { useState } from "react";
 
 const steps = [
   { 
-    title: "Week 10 - Avoiding stones game",
-    description: "Today, we'll make avoiding stones game!",
-    image: "/images/first.png"
-  },
-  {
-    title: "Key programming concepts",
-    description: "Today, we'll cover hide/showw function, and clone function.",
+    title: "Week 10 - Function art",
+    description: "Today, we'll create art work using functions in Scratch!",
+    images: ["/images/first.png"]
   },
   {
     title: "Seating Chart",
     description: "Please check your seat and make sure you're in the right place.",
-    image: "/images/seating-chart.png"
+    images: ["/images/seating-chart.png"]
   },
   {
-    title: "Step 1: Open Scratch and remix today's start project(week10)",
-    description: "Please share the start file I provided at the studio Week10. My Stuff -> My Studio -> Week10 -> Start File",
-    
-  },
-  {
-    title: "Step 2: Let's start coding with the result sprite",
-    description: "Don't' forget to use evesdrop function to extrct the exact color.",
-    image: "/images/result.png" 
-  },
-  {
-    title: "Step 3: Let's code the Heart sprite",
-    description: "You can move white dots to change your music, or you can add additional costumes to the record sprite.",
-    image: "/images/heart.png"
-  },
-  {
-    title: "Step 4: Let's code the Stone sprite",
-    description:"Stone sprite creates falling clones every second when the green flag is clicked. Each clone appears at a random position near the top of the screen with a random costume and falls downward continuously. If a clone touches the character Nano or falls below the screen,it disappears. If touching Nano, it plays a sound and reduces a life by 1.",
-    image: "/images/stone.png"
-  },
-  {
-    title: "Step 5: Let's code Nano sprite",
-    description: "Nano can move left and right using the arrow keys. It also checks for game conditions: if the score becomes greater than 9, it broadcasts a success message, and if life drops below 1, it broadcasts gameover.",
-    image: "/images/nano.png"
-  },
-  {
-    title: "Step 6: Test your game and share to the studio week10",
-    description: "Dont forget to add your project to the studio week10.",
+    title: "Key programming concepts",
+    description: "Today, we'll cover functions, very important concept in most programming languages.",
+    images: ["/images/functions.png"]
   },
   
+  {
+    title: "Step 1: Open Scratch and remix today's start project(week11)",
+    description: "Please share the start file I provided at the studio Week11. My Stuff -> My Studio -> Week11 -> Start File",
+  },
+  {
+    title: "Step 2: Functions in Scratch",
+    description: "As you can see, drawing starts with a space key, and it stops with a 'c' key.",
+    images: ["/images/basic.png"] 
+  },
+  {
+    title: "Step 2: Let's start coding with basic structure",
+    description: "As you can see, drawing starts with a space key, and it stops with a 'c' key.",
+    images: ["/images/basic.png"] 
+  },
+  {
+    title: "Step 3: Defining function in Scratch",
+    description: "In Scratch, we can define a function by clicking on 'Make a block' and give it a name. This allows us to create reusable code blocks that can be called multiple times.",
+    images: ["/images/makeablock.png","/images/blockname.png"]
+  },
+  {
+    title: "Step 4: Let's create one drawing function",
+    description: "Let's create one drawing functions.",
+    images: ["/images/centered.png"]
+  },
+  {
+    title: "Step 5: Let's create one more drawing function to make our art more interesting",
+    images: ["/images/rotation.png"]
+  },
+  {
+    title: "Step 6: Test your drawing and share the project to the studio week11",
+    description: "Dont forget to add your project to the studio week11.",
+  },
 ];
 
 export default function ScratchGameTutorial() {
@@ -59,19 +63,22 @@ export default function ScratchGameTutorial() {
       <div style={styles.card}>
         <h2 style={styles.title}>{step.title}</h2>
         <p style={styles.description}>{step.description}</p>
-        {step.image && (
-          <div style={{ marginBottom: "1.5rem" }}>
-            <img
-              src={`${import.meta.env.BASE_URL}${step.image}`}
-              alt={step.title}
-              style={{
-                width: "100%",
-                borderRadius: "16px",
-                border: "2px solid #90caf9"
-              }}
-            />
+        
+        {/* Multiple images display section - vertical stack only */}
+        {step.images && step.images.length > 0 && (
+          <div style={styles.imagesContainer}>
+            {step.images.map((image, index) => (
+              <div key={index} style={styles.imageWrapper}>
+                <img
+                  src={`${import.meta.env.BASE_URL}${image}`}
+                  alt={`${step.title} - image ${index + 1}`}
+                  style={styles.image}
+                />
+              </div>
+            ))}
           </div>
         )}
+        
         <div style={styles.buttonRow}>
           <button
             onClick={() => setStepIndex(stepIndex - 1)}
@@ -135,6 +142,20 @@ const styles = {
     fontSize: "1.1rem",
     marginBottom: "1.5rem",
     color: "#333"
+  },
+  imagesContainer: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "1.5rem",
+    marginBottom: "1.5rem"
+  },
+  imageWrapper: {
+    width: "100%",
+  },
+  image: {
+    width: "100%",
+    borderRadius: "16px",
+    border: "2px solid #90caf9"
   },
   buttonRow: {
     display: "flex",
