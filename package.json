@@ -1,7 +1,7 @@
 {
   "name": "scratch-tutorial-verified",
   "version": "1.0.0",
-  "homepage": "https://aboutexo04.github.io/week11/",
+  "homepage": "https://week9-scratch.netlify.app/",
   "private": true,
   "scripts": {
     "dev": "vite",
