@@ -1,31 +1,21 @@
 import { useState } from "react";
-import firstImage from "./images/first.png";
-import seatingChartImage from "./images/seating-chart.png";
-import functionsImage from "./images/functions.png";
-import basicImage from "./images/basic.png";
-import variablesImage from "./images/variables.png";
-import makeablockImage from "./images/makeablock.png";
-import centeredImage from "./images/centered.png";
-import rotationImage from "./images/rotation.png";
-import staticDrawingImage from "./images/static_drawing.png";
-import conDrawingImage from "./images/cone-drawing.png";
 const steps = [
   {
     title: "Week 9 - Function art",
     description: "Today, we'll create art work using functions in Scratch!",
-    images: [firstImage],
+    images: ["/images/first.png"],
   },
   {
     title: "Seating Chart",
     description:
       "Please check your seat and make sure you're in the right place.",
-    images: [seatingChartImage],
+    images: ["/images/seating-chart.png"],
   },
   {
     title: "Key programming concepts",
     description:
       "Today, we'll cover functions, very important concept in most programming languages.",
-    images: [functionsImage],
+    images: ["/images/functions.png"],
   },
 
   {
@@ -37,39 +27,39 @@ const steps = [
     title: "Step 2: Let's start coding with basic structure",
     description:
       "As you can see, drawing starts with a space key, and it stops with a 'c' key.",
-    images: [basicImage],
+    images: ["/images/basic.png"],
   },
   {
     title: "Step 3: Add two variables",
     description:
       "You need two variables in this project. One is for the angle, and the other is for the length.",
-    images: [variablesImage],
+    images: ["/images/variables.png"],
   },
   {
     title: "Step 4: Defining function in Scratch",
     description:
       "In Scratch, we can define a function by clicking on 'Make a block' and give it a name. This allows us to create reusable code blocks that can be called multiple times.",
-    images: [makeablockImage],
+    images: ["/images/makeablock.png", "/images/blockname.png"],
   },
   {
     title: "Step 5: Let's create centered drawing function",
     description: "Let's create the first drawing functions.",
-    images: [centeredImage],
+    images: ["/images/centered.png"],
   },
   {
     title:
       "Step 6: Let's create one more drawing function to make our art more interesting",
     description: "It's rotation drawing.",
-    images: [rotationImage],
+    images: ["/images/rotation.png"],
   },
   {
     title: "Step 7: This static drowing you can try",
-    images: [staticDrawingImage],
+    images: ["/images/static_drawing.png"],
   },
   {
     title: "Step 8: This is cone drawing",
     description: "Please try to draw a cone using the functions we created.",
-    images: [conDrawingImage],
+    images: ["/images/cone-drawing.png"],
   },
   {
     title:
