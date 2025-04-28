@@ -64,7 +64,7 @@ const steps = [
   },
   {
     title:
-      "Step 9: Test your drawing and share the project to the studio week11",
+      "Step 9: Test your drawing and share the project to the studio week9",
     description: "Dont forget to add your project to the studio week 9.",
   },
 ];
