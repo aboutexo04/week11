@@ -22,7 +22,7 @@ const steps = [
   {
     title: "Step 1: Open Scratch and remix today's start project(week 9)",
     description:
-      "Please share the start file I provided at the studio Week11. My Stuff -> My Studio -> Week11 -> Start File",
+      "Please share the start file I provided at the studio Week11. My Stuff -> My Studio -> Week9 -> Start File",
   },
   {
     title: "Step 2: Let's start coding with basic structure",
