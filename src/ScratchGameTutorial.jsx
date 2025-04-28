@@ -92,7 +92,7 @@ export default function ScratchGameTutorial() {
             {step.images.map((image, index) => (
               <div key={index} style={styles.imageWrapper}>
                 <img
-                  src={`${import.meta.env.BASE_URL}${image}`}
+                  src={image}
                   alt={`${step.title} - image ${index + 1}`}
                   style={styles.image}
                 />
