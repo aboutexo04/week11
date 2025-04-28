@@ -60,7 +60,7 @@ const steps = [
   {
     title: "Step 8: This is cone drawing",
     description: "Please try to draw a cone using the functions we created.",
-    images: ["/images/cone_drawing.png"],
+    images: ["/images/cone-drawing.png"],
   },
   {
     title:
